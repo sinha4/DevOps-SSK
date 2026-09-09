@@ -1,32 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Student Information System</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Student Information System — MCA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="card">
-    <h1>Student Information System</h1>
-    <div class="info-row">
-      <span class="label">Name:</span>
-      <span class="value">Kanika, Shambhavi and Shalwin</span>
-    </div>
-    <div class="info-row">
-      <span class="label">Register Number:</span>
-      <span class="value">127, 151, 150</span>
-    </div>
-    <div class="info-row">
-      <span class="label">Programme:</span>
-      <span class="value">MCA</span>
-    </div>
 
-    <div class="datetime" id="datetime"></div>
+  <main class="sheet">
 
-    <button id="themeToggle" class="theme-btn">Toggle Dark Mode</button>
-  </div>
+    <header class="masthead">
+      <div class="seal" aria-hidden="true">
+        <svg viewBox="0 0 60 60" width="42" height="42">
+          <circle cx="30" cy="30" r="28" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="30" cy="30" r="23" fill="none" stroke="currentColor" stroke-width="1"/>
+          <text x="30" y="36" text-anchor="middle" font-family="'Source Serif 4', serif" font-size="18" fill="currentColor">MCA</text>
+        </svg>
+      </div>
+      <div class="masthead-text">
+        <p class="eyebrow">Department record</p>
+        <h1>Student Information System</h1>
+      </div>
+      <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <svg id="iconMoon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 12.6A9 9 0 1 1 11.4 3a7 7 0 0 0 9.6 9.6Z"/></svg>
+        <svg id="iconSun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" hidden><circle cx="12" cy="12" r="4.5"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+      </button>
+    </header>
 
-  <script src="script.js"></script>
+    <nav class="tabs" role="tablist" aria-label="Select student">
+      <!-- tab buttons injected by script.js -->
+    </nav>
+
+    <section class="record" id="record" aria-live="polite">
+      <!-- record content injected by script.js -->
+    </section>
+
+    <footer class="ledger-footer">
+      <span id="datetime" class="datetime"></span>
+      <button id="printBtn" class="text-btn">Print record</button>
+    </footer>
+
+  </main>
+
+<script src="script.js"></script>
 </body>
 </html>
